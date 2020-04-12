@@ -1,7 +1,5 @@
 ## one pixel attack on cifar10 by pytorch
 
-[TOC]
-
 
 ### 目前已有模型：
 
