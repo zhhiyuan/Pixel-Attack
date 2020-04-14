@@ -11,6 +11,14 @@
 
 数据集：cifar10
 
+### 环境
+
+torch==1.1.0
+
+torchvision==0.3.0
+
+pillow<7.0.0
+
 ### 运行须知
 
 - 运行前请先配置`config.py`文件中内容（只需配置此内容即可），config中加载的模型名必须与models/__init__.py中的名字一致
