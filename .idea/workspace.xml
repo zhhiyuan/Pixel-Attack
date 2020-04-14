@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18e55646-605d-447c-a191-c351659b33a8" name="Default Changelist" comment="" />
+    <list default="true" id="18e55646-605d-447c-a191-c351659b33a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attack/attack.py" beforeDir="false" afterPath="$PROJECT_DIR$/attack/attack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,12 +21,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="5b6aad2b-ddeb-4e93-ae17-e2657f73efec">
     <option name="files">
       <option value="main.ipynb" />
     </option>
   </component>
   <component name="ProjectId" id="1aQulJNBvrO4F2YqfaWlJ7SVKSh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -86,6 +96,9 @@
       <option name="presentableId" value="Default" />
       <updated>1586680287270</updated>
       <workItem from="1586680288676" duration="16135000" />
+      <workItem from="1586703328366" duration="153000" />
+      <workItem from="1586760919040" duration="99000" />
+      <workItem from="1586836512388" duration="1292000" />
     </task>
     <servers />
   </component>

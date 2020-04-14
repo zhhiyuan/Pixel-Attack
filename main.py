@@ -86,6 +86,8 @@ def test_acc():
     opt._parese()
     global DOWNLOAD_CIFAR10
 
+    if not (os.path.exists('./data/cifar/')) or not os.listdir('./data/cifar/'):
+        DOWNLOAD_CIFAR10=True
 
     # 1a.加载模型
     model = getattr(models, opt.model)()
@@ -127,6 +129,8 @@ def attack_model():
     # 1.加载配置
     opt._parese()
     global DOWNLOAD_CIFAR10
+    if not (os.path.exists('./data/cifar/')) or not os.listdir('./data/cifar/'):
+        DOWNLOAD_CIFAR10=True
 
     # 1a.加载模型
     model = getattr(models, opt.model)()

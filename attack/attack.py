@@ -27,7 +27,7 @@ parser.add_argument('--targeted', action='store_true', help='Set this switch to 
 parser.add_argument('--save', default='./results/results.pkl', help='Save location for the results with pickle.')
 parser.add_argument('--verbose', action='store_true', help='Print out additional information every iteration.')
 
-args = parser.parse_args()
+args = parser.parse_known_args()[0]
 
 def perturb_image(xs, img):
         if xs.ndim < 2:
@@ -120,15 +120,16 @@ def attack_all(net, loader, pixels=1, targeted=False, maxiter=75, popsize=400, v
                 img_var = Variable(input, volatile=True).to(device)
                 prior_probs = F.softmax(net(img_var))
                 _, indices = torch.max(prior_probs, 1)
-                
+
+                #模型原本就预测错误则跳过
                 if target[0] != indices.data.cpu()[0]:
                         continue
 
-                correct += 1
+                correct += 1#预测正确的数目+1
                 target = target.numpy()
 
                 targets = [None] if not targeted else range(10)
-                print("targeted mode", targeted)
+                #print("targeted mode", targeted)
 
                 for target_calss in targets:
                         if (targeted):
@@ -136,7 +137,7 @@ def attack_all(net, loader, pixels=1, targeted=False, maxiter=75, popsize=400, v
                                         continue
                         
                         flag, x = attack(input, target[0], net, target_calss, pixels=pixels, maxiter=maxiter, popsize=popsize, verbose=verbose)
-                        print("flag==>", flag)
+                        #print("flag==>", flag)
 
                         success += flag
                         if (targeted):
