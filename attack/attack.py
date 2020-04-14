@@ -149,7 +149,7 @@ def attack_all(net, loader, pixels=1, targeted=False, maxiter=75, popsize=400, v
                                 print ("success rate: %.4f (%d/%d) [(x,y) = (%d,%d) and (R,G,B)=(%d,%d,%d)]"%(
                                         success_rate, success, correct, x[0],x[1],x[2],x[3],x[4]))
                 
-                if batch_idx==sample:
+                if batch_idx>=sample:
                         break
         return success_rate
 
