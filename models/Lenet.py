@@ -1,47 +1,24 @@
-import torch.nn as nn
 from models.basic_module import BasicModule
-class LeNet5(BasicModule):
-    """
-    for cifar10 dataset.
-    """
+import torch.nn as nn
+import torch.nn.functional as F
 
+class LeNet(BasicModule):
     def __init__(self):
-        super(LeNet5, self).__init__()
-
-        self.model_name = 'Lenet5'
-
-        self.conv_unit = nn.Sequential(
-            # x: [b, 3, 32, 32] => [b, 16, 5, 5]
-            nn.Conv2d(3, 6, kernel_size=5),
-            nn.MaxPool2d(2),
-            nn.Conv2d(6, 16, kernel_size=5),
-            nn.ReLU(),
-            nn.MaxPool2d(2),
-        )
-
-        self.fc_unit = nn.Sequential(
-            nn.Linear(16 * 5 * 5, 120),
-            nn.ReLU(),
-            nn.Linear(120, 84),
-            nn.ReLU(),
-            nn.Linear(84, 10)
-        )
-
-
-
+        super(LeNet, self).__init__()
+        self.model_name='LeNet'
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.fc1   = nn.Linear(16*5*5, 120)
+        self.fc2   = nn.Linear(120, 84)
+        self.fc3   = nn.Linear(84, 10)
 
     def forward(self, x):
-        """
-        :param x: [b, 3, 32, 32]
-        :return:
-        """
-        # [b, 3, 32, 32] => [b, 16, 5, 5]
-        x = self.conv_unit(x)
-
-        # [b, 16, 5, 5] => [b, 16*5*5]
-        x = x.view(-1, 16 * 5 * 5)
-
-        # [b, 16*5*5] => [b, 10]
-        logits = self.fc_unit(x)
-        # [b, 10]
-        return logits
+        out = F.relu(self.conv1(x))
+        out = F.max_pool2d(out, 2)
+        out = F.relu(self.conv2(out))
+        out = F.max_pool2d(out, 2)
+        out = out.view(out.size(0), -1)
+        out = F.relu(self.fc1(out))
+        out = F.relu(self.fc2(out))
+        out = self.fc3(out)
+        return out

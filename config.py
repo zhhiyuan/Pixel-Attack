@@ -1,9 +1,14 @@
 import torch as t
 class Config():
     #一般只修改以下三项
-    model_path = './ckps/Lenet5_04_12_20_01.pth'  # 预训练模型，None表示重新训练
-    model = 'LeNet5'#加载的模型，模型名必须与models/__init__.py中的名字一致
+    model_path = './ckps/LeNet_04_14_16_00.pth'  # 预训练模型，None表示重新训练
+    model = 'LeNet'#加载的模型，模型名必须与models/__init__.py中的名字一致
     use_gpu=True    #是否使用gpu
+
+    '''
+    VGG11,VGG13,VGG16,VGG19,LeNet,MobileNet,ResNet18,ResNet34
+    
+    '''
 
     attack_num = 1000  #选择攻击的样本数量
 

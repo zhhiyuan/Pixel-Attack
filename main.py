@@ -156,12 +156,12 @@ def attack_model():
 
 
 
-    success_rate = attack_all(model,test_loader,pixels=1,targeted=False,maxiter=100,popsize=400,verbose=False,device=opt.device,sample=opt.attack_num)
+    success_rate = attack_all(model,test_loader,pixels=1,targeted=False,maxiter=400,popsize=400,verbose=False,device=opt.device,sample=opt.attack_num)
     string = 'model name:{} | accuracy:{} | success rate:{}| time: {}\n'.format(opt.model,accuracy,success_rate, strftime('%m_%d_%H_%M_%s'))
     open('log.txt','a').write(string)
 
 if __name__ == '__main__':
-    attack_model()
+    test_acc()
     # train()
 
     # attack_model()

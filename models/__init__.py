@@ -1,3 +1,4 @@
-from models.VGG import vgg11,vgg13,vgg16,vgg19
-from models.Lenet import LeNet5
-from models.mobileNet import MobileNets
+from models.VGG import VGG11,VGG13,VGG16,VGG19
+from models.Lenet import LeNet
+from models.mobileNet import MobileNet
+from models.resnet import ResNet18,ResNet34

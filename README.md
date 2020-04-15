@@ -1,15 +1,29 @@
 ## one pixel attack on cifar10 by pytorch
 
+目前攻击默认采用的是三像素攻击，有些模型采用了五像素。默认攻击迭代次数是100次。
 
 ### 目前已有模型：
 
-- vgg，包含vgg11,vgg13,vgg16,vgg19
+- VGG11
 
-- Lenet5
+- VGG13
 
-- mobilenet
+- VGG16
+
+- VGG19
+
+- LeNet
+
+- MobileNet
+
+- ResNet18
+
+- ResNet34
+
 
 数据集：cifar10
+
+[模型参考](https://github.com/kuangliu/pytorch-cifar)
 
 ### 环境
 
@@ -18,6 +32,8 @@ torch==1.1.0
 torchvision==0.3.0
 
 pillow<7.0.0
+
+tqdm
 
 ### 运行须知
 
