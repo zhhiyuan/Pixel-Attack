@@ -123,3 +123,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+data/cifar/cifar-10-batches-py/batches.meta
+data/cifar/cifar-10-batches-py/data_batch_1
+data/cifar/cifar-10-batches-py/data_batch_2
+data/cifar/cifar-10-batches-py/data_batch_3
+data/cifar/cifar-10-batches-py/data_batch_4
+data/cifar/cifar-10-batches-py/data_batch_5
+data/cifar/cifar-10-batches-py/readme.html
+data/cifar/cifar-10-batches-py/test_batch
+data/cifar/cifar-10-python.tar.gz
+ckps/ResNet101_04_16_09_55.pth
