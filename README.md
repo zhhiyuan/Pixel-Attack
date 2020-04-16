@@ -20,6 +20,7 @@
 
 - ResNet34
 
+- ResNet101
 
 数据集：cifar10
 
