@@ -22,6 +22,8 @@
 
 - ResNet101
 
+[预训练模型](https://github.com/zhhiyuan/Pixel-Attack/releases)
+
 数据集：cifar10
 
 [模型参考](https://github.com/kuangliu/pytorch-cifar)
