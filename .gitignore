@@ -133,3 +133,11 @@ data/cifar/cifar-10-batches-py/readme.html
 data/cifar/cifar-10-batches-py/test_batch
 data/cifar/cifar-10-python.tar.gz
 ckps/ResNet101_04_16_09_55.pth
+ckps/LeNet_04_14_16_00.pth
+ckps/MobileNet_04_14_15_44.pth
+ckps/ResNet18_04_15_05_17.pth
+ckps/ResNet34_04_15_07_43.pth
+ckps/vgg11_04_15_01_50.pth
+ckps/vgg13_04_15_02_00.pth
+ckps/vgg16_04_15_03_06.pth
+ckps/vgg19_04_15_03_13.pth
