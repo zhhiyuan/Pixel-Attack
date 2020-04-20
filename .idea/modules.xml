@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Pixel Attack.iml" filepath="$PROJECT_DIR$/.idea/Pixel Attack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Adversarial Attack.iml" filepath="$PROJECT_DIR$/.idea/Adversarial Attack.iml" />
     </modules>
   </component>
 </project>

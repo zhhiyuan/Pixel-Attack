@@ -6,8 +6,9 @@ class Config():
     use_gpu=True    #是否使用gpu
 
     '''
-    VGG11,VGG13,VGG16,VGG19,LeNet,MobileNet,ResNet18,ResNet34
-    
+    MobileNet,ShuffleNetV2,ShuffleNet,MobileNetV2,SqueezeNet
+    wk:  VGG11,VGG13,VGG16,VGG19,
+    zzc:ResNet18,ResNet34,ResNet50,ResNet101,ResNet152
     '''
 
     attack_num = 1000  #选择攻击的样本数量

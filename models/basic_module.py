@@ -17,10 +17,10 @@ class BasicModule(t.nn.Module):
         '''
         self.load_state_dict(t.load(path))
 
-    def save(self,name=None):
+    def save(self,name=None,epoch=-1):
         if name is None:
             prefix = './ckps/' + self.model_name + '_'
-            name = strftime(prefix + '%m_%d_%H_%M.pth')
+            name = strftime(prefix + '%m_%d_%H_%M_ep{}.pth'.format(epoch))
         t.save(self.state_dict(), name)
         print('model saved at {}'.format(name))
 

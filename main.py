@@ -10,7 +10,8 @@ from time import strftime
 
 from config import opt
 import models
-from attack.attack import attack_all
+from attack.PixelAttack import attack_all
+from attack.PGDAttack import LinfPGDAttack
 
 DOWNLOAD_CIFAR10=False   #是否需要下载数据集
 
@@ -119,10 +120,10 @@ def test_acc():
     print('test accuracy:%.2f' % accuracy)
     return accuracy
 
-@t.no_grad()
-def attack_model():
+
+def attack_model_pixel():
     '''
-    攻击模型
+    pixel攻击模型
     :return:
     '''
     accuracy = test_acc()
@@ -136,7 +137,7 @@ def attack_model():
     model = getattr(models, opt.model)()
     if opt.model_path:
         model.load(opt.model_path)
-    model.to(opt.device)
+    model.to(opt.device).eval()
 
 
     # 2.加载数据
@@ -157,11 +158,66 @@ def attack_model():
 
 
     success_rate = attack_all(model,test_loader,pixels=1,targeted=False,maxiter=400,popsize=400,verbose=False,device=opt.device,sample=opt.attack_num)
-    string = 'model name:{} | accuracy:{} | success rate:{}| time: {}\n'.format(opt.model,accuracy,success_rate, strftime('%m_%d_%H_%M_%s'))
+    string = 'model name:{} | accuracy:{} | success rate:{}| time: {}\n'.format(opt.model,accuracy,success_rate, strftime('%m_%d_%H_%M_%S'))
     open('log.txt','a').write(string)
+
+def attack_model_PGD():
+    '''
+    PGD攻击模型
+    :return:
+    '''
+    accuracy = test_acc()
+    # 1.加载配置
+    opt._parese()
+    global DOWNLOAD_CIFAR10
+    if not (os.path.exists('./data/cifar/')) or not os.listdir('./data/cifar/'):
+        DOWNLOAD_CIFAR10=True
+
+    # 1a.加载模型
+    model = getattr(models, opt.model)()
+    if opt.model_path:
+        model.load(opt.model_path)
+    model.to(opt.device).eval()
+
+
+    # 2.加载数据
+    transform = tv.transforms.Compose([
+           tv.transforms.ToTensor(),
+           tv.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+       ])
+
+    test_data = tv.datasets.CIFAR10(
+        root='./data/cifar/',
+        train=False,
+        transform=transform,
+        download=DOWNLOAD_CIFAR10
+    )
+
+    test_loader = DataLoader(test_data, batch_size=1, shuffle=True)
+
+    success_num = 0
+    attack = LinfPGDAttack(model)
+    for ii, (data, label) in enumerate(test_loader):
+        if ii>=opt.attack_num:
+            break
+        data,label = data.to(opt.device),label.to(opt.device)
+        test_score = model(data)
+        if t.argmax(test_score.to('cpu'), 1) == label:
+            continue
+        perturb_x =attack.perturb(data,label)
+        test_score = model(t.FloatTensor(perturb_x).to(opt.device))
+        if t.argmax(test_score.to('cpu'), 1) != label:
+            success_num+=1
+
+
+    success_rate = success_num/ii
+
+    string = 'model name:{} | accuracy:{} | success rate:{}| time: {}\n'.format(opt.model,accuracy,success_rate, strftime('%m_%d_%H_%M_%S'))
+    open('log.txt','a').write(string)
+
 
 if __name__ == '__main__':
     test_acc()
     # train()
 
-    # attack_model()
+    # attack_model_pixel()
