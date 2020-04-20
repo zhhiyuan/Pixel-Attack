@@ -1,8 +1,8 @@
 import torch as t
 class Config():
     #一般只修改以下三项
-    model_path = './ckps/LeNet_04_14_16_00.pth'  # 预训练模型，None表示重新训练
-    model = 'LeNet'#加载的模型，模型名必须与models/__init__.py中的名字一致
+    model_path = None # 预训练模型，None表示重新训练
+    model = 'SqueezeNet'#加载的模型，模型名必须与models/__init__.py中的名字一致
     use_gpu=True    #是否使用gpu
 
     '''

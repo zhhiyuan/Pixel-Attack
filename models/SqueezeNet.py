@@ -81,6 +81,7 @@ class SqueezeNet(BasicModule):
         x = self.fire9(x)
         x = self.conv2(x)
         x = self.avg_pool(x)
+        x = x.view(-1,10)
         x = self.softmax(x)
         return x
 

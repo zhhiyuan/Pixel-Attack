@@ -217,7 +217,7 @@ def attack_model_PGD():
 
 
 if __name__ == '__main__':
-    test_acc()
+    train()
     # train()
 
     # attack_model_pixel()
