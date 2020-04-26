@@ -7,8 +7,8 @@ class Config():
 
     '''
     MobileNet,ShuffleNetV2,ShuffleNet,MobileNetV2,SqueezeNet
-    wk:  VGG11,VGG13,VGG16,VGG19,
-    zzc:ResNet18,ResNet34,ResNet50,ResNet101,ResNet152
+    VGG11,VGG13,VGG16,VGG19,
+    ResNet18,ResNet34,ResNet50,ResNet101,ResNet152
     '''
 
     attack_num = 1000  #选择攻击的样本数量
