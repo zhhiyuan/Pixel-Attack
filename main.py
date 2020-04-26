@@ -204,9 +204,9 @@ def attack_model_PGD():
         test_score = model(data)
         if t.argmax(test_score.to('cpu'), 1) == label:
             continue
-        perturb_x =attack.perturb(data,label)
+        perturb_x =attack.perturb(data.data.numpy(),label)
         test_score = model(t.FloatTensor(perturb_x).to(opt.device))
-        if t.argmax(test_score.to('cpu'), 1) != label:
+        if t.argmax(test_score.to('cpu'), 1) != label.to('cpu'):
             success_num+=1
 
 

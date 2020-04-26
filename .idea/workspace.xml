@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="18e55646-605d-447c-a191-c351659b33a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/SqueezeNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/SqueezeNet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/shufflenet.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/shufflenet.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +115,8 @@
       <workItem from="1587370396335" duration="25000" />
       <workItem from="1587371000158" duration="136000" />
       <workItem from="1587375196876" duration="2025000" />
-      <workItem from="1587392959640" duration="961000" />
+      <workItem from="1587392959640" duration="3400000" />
+      <workItem from="1587869372057" duration="4500000" />
     </task>
     <servers />
   </component>
@@ -138,53 +136,42 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586840031428" />
-    <state width="1493" height="341" key="GridCell.Tab.0.bottom" timestamp="1587394005200">
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom" timestamp="1587438081091">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="341" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587394005200" />
-    <state width="1493" height="341" key="GridCell.Tab.0.center" timestamp="1587394005200">
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587438081091" />
+    <state width="1493" height="234" key="GridCell.Tab.0.center" timestamp="1587438081091">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="341" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587394005200" />
-    <state width="1493" height="341" key="GridCell.Tab.0.left" timestamp="1587394005200">
+    <state width="1493" height="234" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587438081091" />
+    <state width="1493" height="234" key="GridCell.Tab.0.left" timestamp="1587438081091">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="341" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587394005200" />
-    <state width="1493" height="341" key="GridCell.Tab.0.right" timestamp="1587394005200">
+    <state width="1493" height="234" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587438081091" />
+    <state width="1493" height="234" key="GridCell.Tab.0.right" timestamp="1587438081091">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="341" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587394005200" />
-    <state width="1493" height="341" key="GridCell.Tab.1.bottom" timestamp="1587394048079">
+    <state width="1493" height="234" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587438081091" />
+    <state width="1493" height="234" key="GridCell.Tab.1.bottom" timestamp="1587438081092">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="341" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587394048079" />
-    <state width="1493" height="341" key="GridCell.Tab.1.center" timestamp="1587394048079">
+    <state width="1493" height="234" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587438081092" />
+    <state width="1493" height="234" key="GridCell.Tab.1.center" timestamp="1587438081091">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="341" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1587394048079" />
-    <state width="1493" height="341" key="GridCell.Tab.1.left" timestamp="1587394048079">
+    <state width="1493" height="234" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1587438081091" />
+    <state width="1493" height="234" key="GridCell.Tab.1.left" timestamp="1587438081091">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="341" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1587394048079" />
-    <state width="1493" height="341" key="GridCell.Tab.1.right" timestamp="1587394048079">
+    <state width="1493" height="234" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1587438081091" />
+    <state width="1493" height="234" key="GridCell.Tab.1.right" timestamp="1587438081092">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="341" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1587394048079" />
+    <state width="1493" height="234" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1587438081091" />
     <state x="272" y="77" key="SettingsEditor" timestamp="1586840036611">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="272" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586840036611" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>71</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Adversarial_Attack$main.coverage" NAME="main Coverage Results" MODIFIED="1587394005071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
