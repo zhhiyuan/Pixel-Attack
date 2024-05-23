@@ -2,11 +2,11 @@
 
 目前攻击默认采用的是三像素攻击，有些模型采用了五像素。默认攻击迭代次数是100次。
 
-code from [there](https://github.com/DebangLi/one-pixel-attack-pytorch)
+code from [here](https://github.com/DebangLi/one-pixel-attack-pytorch)
 
 ## 新增PGD攻击
 
-code from [there](https://github.com/wanglouis49/pytorch-adversarial_box)
+code from [here](https://github.com/wanglouis49/pytorch-adversarial_box)
 
 
 ## 此代码不再更新，最新代码请参照[这里](https://github.com/zhhiyuan/pretrain-model-attack)
